@@ -1,0 +1,21 @@
+#! /bin/bash
+
+# compilacao
+gcc -g -std=c99 main.c -o exe
+
+# casos de teste
+
+# simples
+#./exe '2 + 3' 
+#./exe '3 * 5'
+#./exe ' 2 - 3'
+#./exe ' 2/4'
+
+# que envolvem ordem de operacao 
+#./exe '3 + 4 * 1'
+#./exe '2 + 2/3'
+
+# testes que envolvem parenteses
+./exe '(5 + 4) * 3'
+echo " "
+./exe '5 + 4 * 3'
