@@ -17,8 +17,17 @@ typedef struct no
 } 
 no;
 
-// funcoes da pilha 
-no* constroi_pilha(char expressao[]);
+
+// funcoes da pilha
+
+/*
+ * a funcao recebe uma expressao 
+ * 
+ * a funcao monta a pilha com os tokens na ordem polonesa reversa
+ *
+ * a funcao retorna um ponteiro para o comeco da lista
+ */
+no* constroi_posfixa(char expressao[]);
 
 /*
  * a funcao recebe uma expressao e um ponteiro para uma lista

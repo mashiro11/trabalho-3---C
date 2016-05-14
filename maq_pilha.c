@@ -11,7 +11,7 @@
 #include <stdbool.h>
 #include "maq_pilha.h"
 
-no* constroi_pilha(char expressao[])
+no* constroi_posfixa(char expressao[])
 {
     char temp[TAMANHO_MEDIO];
 
@@ -27,8 +27,8 @@ no* constroi_pilha(char expressao[])
     // itera pela lista, da esquerda para a direita
     while(plista_input != NULL)
     {
-        // se o token atual eh um operando
-        if ( isdigit(plista_input->valor[0]))
+        // se o token atual eh um operando 
+        if (isdigit(plista_input->valor[0]) || isdigit(plista_input->valor[1]))
         {
             // coloca ele no fim da maquina de pilha
             push(plista_input->valor, &pmaq_pilha);
@@ -155,7 +155,6 @@ no* converte_para_lista(char expressao[], no* plista_input)
     // itera pela expressao, caractere a caractere
     for (int i = 0; i < tamanho; i++)
     {   
-
         // se o caractere eh um espaco em branco ou um '\n'
         if (expressao[i] == ' ' || expressao[i] == '\n')
         {
@@ -177,6 +176,14 @@ no* converte_para_lista(char expressao[], no* plista_input)
 
         // se o caractere eh um numero 
         else if (isdigit(expressao[i]))
+        {
+            // adiciona ele ao token atual
+            token_atual[token_ind] = expressao[i];
+            token_ind++; 
+        }
+
+        // se o caractere eh um sinal de '-' e esta seguido de um numero, entao eh um numero negativo
+        else if (expressao[i] == '-' && isdigit(expressao[i+1]))
         {
             // adiciona ele ao token atual
             token_atual[token_ind] = expressao[i];
