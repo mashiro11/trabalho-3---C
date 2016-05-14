@@ -5,12 +5,26 @@ gcc -g -std=c99 main.c -o exe
 
 # casos de teste
 
-# simples com soma e subtracao
+# simples com soma
 #./exe '2 + 3' 
 #echo " "
-./exe '2 + (-3)'
+#./exe '2 + (-3)'
+#echo " "
+#./exe '-2 + 1'
+#echo " "
+#./exe '-2 + (-2)'
+
+#simples com subtracao 
+#./exe '2 - 2'
+#echo " "
+#./exe '2 - (-2)'
 #echo " "
 #./exe '2+3+4+2'
+#echo " "
+#./exe '-3 - 1'
+#echo " "
+#./exe '-4 - (-3)'
+
 
 # com inteiros com mais de 64 bits
 # 2^128 + 0
@@ -24,7 +38,7 @@ gcc -g -std=c99 main.c -o exe
 #2^128 - 2^128
 #./exe '340282366920938463463374607431768211456 - 340282366920938463463374607431768211456'
 #echo " "
-
+#
 # 2 ^ 129 - 2 ^ 128
 #./exe '680564733841876926926749214863536422912 - 340282366920938463463374607431768211456'
 #echo " "

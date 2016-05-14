@@ -129,9 +129,12 @@ void obtem_sem_sinal(char operando[], char op_sem_sinal[])
         }
         op_sem_sinal[tamanho-1] = '\0';
     }   
-
-    // senao, copia
-    strcpy(op_sem_sinal, operando);
+    
+    else
+    {
+        // senao, copia
+        strcpy(op_sem_sinal, operando);
+    }
 }
 
 void muda_sinal(char valor[])
