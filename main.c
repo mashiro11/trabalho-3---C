@@ -82,6 +82,6 @@ int main(int argc, char* argv[])
         plista_aux = plista_aux->prox;
     }
     
-    printf("Resultado na pilha: %s\n", pmaq_pilha->valor);
+    printf("Resultado na pilha: %s\n\n", pmaq_pilha->valor);
     return 0;
 }
