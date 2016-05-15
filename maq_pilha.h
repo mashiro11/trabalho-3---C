@@ -1,8 +1,8 @@
 #ifndef MAQ_PILHA_H
 #define MAQ_PILHA_H
 
-#define TAMANHO_MAX 100
-#define TAMANHO_MEDIO 40
+#define TAMANHO_MAX 400
+#define TAMANHO_MEDIO 100
 
 // definicao de um no de uma lista dupla  
 typedef struct no 

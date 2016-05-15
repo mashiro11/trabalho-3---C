@@ -7,7 +7,7 @@ void soma_controle(char operando1[], char operando2[], no** ppmaq_pilha)
 {
     // string sem o sinal 
     char op1_sem_sinal[TAMANHO_MEDIO];
-    char op2_sem_sinal[TAMANHO_MAX];
+    char op2_sem_sinal[TAMANHO_MEDIO];
 
     char valor[TAMANHO_MEDIO];
     bool op1_positivo;

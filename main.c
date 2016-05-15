@@ -41,7 +41,6 @@ int main(int argc, char* argv[])
     // itera ate a expressao acabar
     while (plista_aux != NULL)
     {
-        
         // se o token atual eh um numero
         if ( isdigit(plista_aux->valor[0])  || isdigit(plista_aux->valor[1]))
         {
@@ -67,12 +66,12 @@ int main(int argc, char* argv[])
                     break;
 
                 case '*':
-                    multiplica(operando1, operando2, &pmaq_pilha);
+                    multiplica_controle(operando1, operando2, &pmaq_pilha);
                     break;
 
-                case '/':
-                    divide(operando1, operando2, &pmaq_pilha);
-                    break;
+//                case '/':
+  //                  divide_controle(operando1, operando2, &pmaq_pilha);
+    //                break;
 
                 default:
                     printf("Operando invalido na pilha!\n");
