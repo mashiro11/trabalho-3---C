@@ -69,9 +69,9 @@ int main(int argc, char* argv[])
                     multiplica_controle(operando1, operando2, &pmaq_pilha);
                     break;
 
-//                case '/':
-  //                  divide_controle(operando1, operando2, &pmaq_pilha);
-    //                break;
+                case '/':
+                    divide_controle(operando1, operando2, &pmaq_pilha);
+                    break;
 
                 default:
                     printf("Operando invalido na pilha!\n");
@@ -82,6 +82,6 @@ int main(int argc, char* argv[])
         plista_aux = plista_aux->prox;
     }
     
-    printf("Resultado na pilha: %s", pmaq_pilha->valor);
+    printf("Resultado na pilha: %s\n", pmaq_pilha->valor);
     return 0;
 }

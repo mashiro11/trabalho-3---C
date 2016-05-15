@@ -7,7 +7,7 @@
 void converte_operando(char operando[], uint32_t op[])
 {   
     int tamanho;
-    int ind_operando, ind_array, ind_9dig;
+    int ind_array, ind_9dig;
     char nove_digitos[TAMANHO_MEDIO];
 
     // pega tamanho da string
@@ -78,6 +78,7 @@ void reverte(char string[])
 void converte_operando_string(uint32_t resultado[], char valor[])
 {
     char temp[TAMANHO_MEDIO];
+    char aux[TAMANHO_MEDIO];
     bool chance_zero_esq = true;
 
     // limpa o conteudo de valor
@@ -99,6 +100,22 @@ void converte_operando_string(uint32_t resultado[], char valor[])
 
             // converte bloco para string
             sprintf(temp, "%d", resultado[i]);
+            
+            // se o tamanho da string for diferente de 9 e nao estivermos no ultimo bloco, 
+            // devemos adicionar os zeros correspondentes
+            if (strlen(temp) != 9 && !(i == ELEMENTOS - 1  || resultado[i+1] == 0))
+            {
+                aux[0] = '\0';
+                int j = 0;  
+                for(int tamanho = strlen(temp); tamanho < 9; j++)
+                {
+                    aux[j] = '0';
+                    tamanho++;
+                }
+                aux[j] = '\0';
+                strcat(aux, temp);
+                strcpy(temp, aux); 
+            }
 
             // adiciona em valor
             strcat(valor, temp);

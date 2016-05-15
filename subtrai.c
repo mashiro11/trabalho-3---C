@@ -80,7 +80,6 @@ void subtrai(char operando1[], char operando2[], char valor[])
         converte_operando_string(resultado, valor);
         muda_sinal(valor);
     }
-
 }
 
 int analisa_maior(uint32_t op1[], uint32_t op2[])

@@ -42,7 +42,6 @@ void multiplica(char operando1[], char operando2[], char valor[])
     uint32_t op2[ELEMENTOS];
     uint32_t resultado[ELEMENTOS];
     uint64_t temp;
-    uint32_t temp1; 
 
     // zera o conteudo de resultado 
     for (int i = 0; i < ELEMENTOS; i++)

@@ -3,6 +3,7 @@
 
 #define TAMANHO_MAX 400
 #define TAMANHO_MEDIO 100
+#define TAMANHO_PEQUENO 5
 
 // definicao de um no de uma lista dupla  
 typedef struct no 
