@@ -79,7 +79,7 @@ void faz_soma(uint32_t op1[], uint32_t op2[], uint32_t resultado[])
         resultado[i] = op1[i] + op2[i];
 
         // caso tenha havido um vai-um
-        if (resultado[i] > HOUVE_CARRY)
+        if (resultado[i] >= HOUVE_CARRY)
         { 
             // corrige  
             resultado[i] -= HOUVE_CARRY;

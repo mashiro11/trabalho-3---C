@@ -42,6 +42,7 @@ void multiplica(char operando1[], char operando2[], char valor[])
     uint32_t op2[ELEMENTOS];
     uint32_t resultado[ELEMENTOS];
     uint64_t temp;
+    uint32_t temp1;
 
     // zera o conteudo de resultado 
     for (int i = 0; i < ELEMENTOS; i++)
@@ -66,13 +67,19 @@ void multiplica(char operando1[], char operando2[], char valor[])
             // poe parte menos significativa no resultado 
             if (i + j < ELEMENTOS)
             {
-                resultado[i + j] += (uint32_t)temp;
+                // pega os nove digitos menos significativos
+                temp1 = (uint32_t) temp;
+                temp1 = temp % 1000000000; 
+
+                // poe valor correto 
+                resultado[i + j] += temp1;
             }
 
             // poe parte mais significativa no resultado, se couber
             if (i + j + 1 < ELEMENTOS)
             {
-                resultado[i + j + 1] += (uint32_t) (temp >> 32); 
+                temp1 = temp / 1000000000;
+                resultado[i + j + 1] += temp1;
             } 
         }
     }
