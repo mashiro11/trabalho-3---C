@@ -22,6 +22,7 @@ void converte_operando(char operando[], uint32_t op[]);
 */
 void reverte(char string[]);
 
+
 /* A funcao recebe um array de elementos de 32 bits e uma string.
 *
 * A funcao converte o resultado (numero de 256 bits representado por um array de elementos de 32 birs) em uma string.  
