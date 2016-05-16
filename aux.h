@@ -9,16 +9,23 @@
 
 #include <stdint.h>
 
+/* Funcao recebe uma string com o operando de uma operacao e um array de numeros de 32 bits onde o operando sera
+armazenado.
+* A funcao converte os caracteres da string que representam numeros e os armazena no array. 
+*/
 void converte_operando(char operando[], uint32_t op[]);
 
 
 /* A funcao recebe uma string.
 *
-* A funcao reverte a ordem dos caracteres da string (primeiro caracter se torna o ultimo e o ultimo se torna o primeiro)
+* A funcao reverte a ordem dos caracteres da string (primeiro caracter se torna o ultimo e o ultimo se torna o primeiro).
 */
 void reverte(char string[]);
 
-
+/* A funcao recebe um array de elementos de 32 bits e uma string.
+*
+* A funcao converte o resultado (numero de 256 bits representado por um array de elementos de 32 birs) em uma string.  
+*/
 void converte_operando_string(uint32_t resultado[], char valor[]);
 
 
